@@ -1,0 +1,72 @@
+# Core dependencies
+numpy>=1.21.0
+torch>=2.0.0
+scipy>=1.7.0
+
+# Deep Learning & Embeddings
+transformers>=4.30.0
+sentence-transformers>=2.2.0
+tokenizers>=0.13.0
+
+# Spatial Processing
+rtree>=1.0.0
+pytorch3d>=0.7.0
+open3d>=0.17.0
+
+# Navigation
+networkx>=2.8.0
+sympy>=1.11.0
+shapely>=2.0.0
+
+# Visualization
+matplotlib>=3.5.0
+plotly>=5.13.0
+seaborn>=0.12.0
+
+# Language Processing
+nltk>=3.8.0
+spacy>=3.5.0
+
+# Robotics Integration
+pybullet>=3.2.5
+ros-noetic-ros-base  # Optional: For ROS integration
+gym>=0.26.0
+
+# Utilities
+pyyaml>=6.0.0
+tqdm>=4.65.0
+pandas>=1.5.0
+h5py>=3.8.0
+
+# Development Tools
+pytest>=7.0.0
+black>=22.0.0
+isort>=5.12.0
+flake8>=6.0.0
+mypy>=1.0.0
+
+# Logging & Experiment Tracking
+wandb>=0.15.0
+tensorboard>=2.11.0
+mlflow>=2.3.0
+
+# Documentation
+sphinx>=4.5.0
+sphinx-rtd-theme>=1.2.0
+
+# Optional: GPU Support
+cupy>=12.0.0  # For CUDA acceleration
+torch-scatter>=2.1.0  # For graph operations
+
+# Version Control
+setuptools>=65.5.1
+wheel>=0.38.4
+
+# Note: Some packages may require system-level dependencies.
+# For Ubuntu/Debian:
+# sudo apt-get install python3-dev build-essential
+
+# Optional: Create environment with:
+# conda create -n hierarchical_memory python=3.8
+# conda activate hierarchical_memory
+# pip install -r requirements.txt

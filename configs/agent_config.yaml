@@ -1,0 +1,39 @@
+### Agent Configuration (agent_config.yaml)
+
+agent:
+  name: "HierarchicalMemoryAgent"
+  type: "EmbodiedAgent"
+  device: "cuda"  # Options: 'cuda', 'cpu'
+
+sensors:
+  - name: "camera"
+    type: "RGB"
+    resolution: [480, 640]
+    field_of_view: 90
+  - name: "depth_sensor"
+    type: "Depth"
+    resolution: [480, 640]
+
+navigation:
+  max_speed: 1.5  # meters per second
+  collision_avoidance: true
+  path_planning_algorithm: "A*"  # Options: 'A*', 'Dijkstra', 'RRT'
+
+memory:
+  max_memory_nodes: 10000
+  embedding_dim: 256
+  text_encoder_model: "sentence-transformers/all-mpnet-base-v2"
+
+logging:
+  log_level: "INFO"
+  log_file: "agent_logs.txt"
+
+actions:
+  supported:
+    - "move_forward"
+    - "turn_left"
+    - "turn_right"
+    - "pick_up"
+    - "place"
+    - "look"
+

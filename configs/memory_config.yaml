@@ -1,0 +1,34 @@
+
+memory:
+  type: "HierarchicalMemory"
+  max_nodes: 10000
+  embedding_dim: 256
+  device: "cuda"  # Options: 'cuda', 'cpu'
+
+text_encoder:
+  model_name: "sentence-transformers/all-mpnet-base-v2"
+  max_length: 128
+
+forest:
+  spatial_indexing: "k-d tree"
+  max_roots: 500
+  spatial_weight: 0.3
+
+pruning:
+  enabled: true
+  max_age_seconds: 3600  # Nodes older than this will be pruned
+
+retrieval:
+  similarity_threshold: 0.7
+  max_results: 5
+  dynamic_spatial_weighting: true
+  temporal_decay:
+    enabled: true
+    decay_rate: 0.001  # Per second decay rate for node relevance
+
+logging:
+  log_level: "DEBUG"
+  log_file: "memory_logs.txt"
+
+constraints:
+  max_memory_usage_mb: 2048  # Limit the memory usage to prevent overflow
